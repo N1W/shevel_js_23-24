@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script data-main="js/app" src="js/require.js"></script>
+</head>
+<body>
+
+	<script type="text/teamplate" id="todo-list">
+		<div class="wrapper">
+			<h1>To Do list.</h1>
+			<ul class="list">
+
+			</ul>
+			<form action="">
+				<input class="new-item" type="text" placeholder="Enter new task">
+				<button class="add-btn">+</button>
+			</form>
+		</div>
+		<form class="edit-form hide" action="">
+			<input class="edit-item" type="text">
+			<button class="edit-btn">Edit</button>
+		</form>
+	</script>
+
+
+	<script type="text/template" id="wrapper-items">
+		<% for(var i = 0; i < data.length; i++) { %>
+		<li class="list-item"><%= data[i] %> <span data-value="<%= data[i] %>" class="list-item__delete">x</span><span data-value="<%= data[i] %>" class="list-item__edit">&#9998;</span> </li>
+		<% }; %>
+	</script>
+
+
+
+
+
+
+	
+</body>
+</html>
